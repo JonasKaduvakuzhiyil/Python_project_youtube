@@ -250,9 +250,187 @@ Skills analyzed: **SQL, Python, Excel, Tableau, Power BI**.
 ---
 
 <details>
-<summary>✨ Personal Relevance (Optional)</summary>
+<summary>✨ Personal Relevance </summary>
 
 For my own journey, this trend validates my focus on **SQL + Python** as the backbone of my analytics dashboard project.  
 It also highlights why I’m adding **Power BI/Tableau** for visualization — even if demand is lower, it differentiates my profile.   
+
+</details>
+
+## 3. How well do jobs and skills pay for Data Analysts?
+
+To identify the highest-paying roles and skills, I only got jobs in the United States and looked at their median salary. But first I looked at the salary distributions of common data jobs like Data Scientist, Data Engineer, and Data Analyst, to get an idea of which jobs are paid the most. 
+
+View my notebook with detailed steps here: [4_Salary_Analysis](3_Project\4_salary_analysis.ipynb).
+
+#### Visualize Data 
+
+```python
+sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order)
+
+ticks_x = plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K')
+plt.gca().xaxis.set_major_formatter(ticks_x)
+plt.show()
+
+```
+
+#### Results
+
+![Salary Distributions of Data Jobs in the US](3_Project\Images\salary_analysis.png)  
+*Box plot visualizing the salary distributions for the top 6 data job titles.*
+
+### Insights
+
+This chart compares the **yearly salary ranges (USD)** for key data-related roles in India.  
+It highlights the median, interquartile range (IQR), and outliers for each role.
+
+---
+
+<details>
+<summary>🔑 Key Observations</summary>
+
+- **Senior roles command significantly higher medians**:  
+  - Senior Data Scientist salaries cluster much higher than Data Scientist roles.  
+  - Senior Data Engineer salaries also outpace Data Engineer roles by a wide margin.  
+
+- **Data Engineers vs. Data Scientists**:  
+  - Both roles show competitive ranges, but **Data Scientists have higher outliers**, suggesting top-end opportunities in research-heavy or specialized domains.  
+
+- **Analyst roles are the entry point**:  
+  - Data Analyst and Senior Data Analyst salaries are notably lower, with narrower ranges.  
+  - This reflects their positioning as stepping stones into engineering or science tracks.  
+
+- **Wide salary spreads**:  
+  - Outliers in senior roles show that compensation can vary drastically depending on company size, industry, and project complexity.  
+
+</details>
+
+---
+
+<details>
+<summary>📌 Deeper Insights</summary>
+
+- **Career ladder clarity**: The box plots visually confirm a clear progression:  
+  Data Analyst → Senior Analyst → Data Scientist/Engineer → Senior Scientist/Engineer.  
+
+- **Engineering vs. Science**:  
+  - Engineers show more **consistent salary bands** (less volatility).  
+  - Scientists show **higher peaks**, rewarding niche expertise in ML/AI.  
+
+- **Market maturity**:  
+  - The relatively lower analyst salaries suggest India’s market still treats analysts as entry-level.  
+  - The high variance in senior roles indicates a maturing ecosystem where top talent is heavily rewarded.  
+
+</details>
+
+---
+
+<details>
+<summary>🚀 Strategic Takeaways</summary>
+
+- **For learners**: Analyst roles are the most accessible entry point, but long-term growth lies in **engineering and science tracks**.  
+- **For career pivots**: Building toward **senior engineer/scientist roles** offers the steepest salary growth.  
+- **For employers**: Salary variance highlights the need for **transparent benchmarks** to attract and retain talent.  
+
+</details>
+
+---
+
+<details>
+<summary>✨ Personal Relevance </summary>
+
+For my own journey, this reinforces why I’m starting with **Data Analyst skills (SQL, Python, visualization)** as a foundation.  
+But it also shows the **long-term payoff** of moving into **data engineering (pipelines, cloud)** or **data science (modeling, ML).**
+
+</details>
+
+### Highest Paid & Most Demanded Skills for Data Analysts
+
+Next, I narrowed my analysis and focused only on data analyst roles. I looked at the highest-paid skills and the most in-demand skills. I used two bar charts to showcase these.
+
+#### Visualize Data
+
+```python
+
+fig, ax = plt.subplots(2, 1)  
+
+# Top 10 Highest Paid Skills for Data Analysts
+sns.barplot(data=df_DA_top_pay, x='median', y=df_DA_top_pay.index, hue='median', ax=ax[0], palette='dark:b_r')
+
+# Top 10 Most In-Demand Skills for Data Analystsr')
+sns.barplot(data=df_DA_skills, x='median', y=df_DA_skills.index, hue='median', ax=ax[1], palette='light:b')
+
+plt.show()
+
+```
+
+#### Results
+Here's the breakdown of the highest-paid & most in-demand skills for data analysts in the US:
+
+![The Highest Paid & Most In-Demand Skills for Data Analysts in the US](3_Project\Images\data_analyst_skill.png)
+*Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the US.*
+
+#### Insights:
+
+💡 Salary vs. Demand: Data Analyst Skills in India
+
+This comparison highlights the **skills that command the highest salaries** versus those that are **most frequently requested** in job postings.  
+It reveals the gap between what employers *want most* and what they’re *willing to pay a premium for*.
+
+---
+
+<details>
+<summary>🔑 Key Observations</summary>
+
+- **Highest Paid Skills**:  
+  - Specialized tools like **PySpark, Linux, GitLab, Databricks, Scala** top the salary list.  
+  - These are less common in analyst roles, but when required, they command a premium.  
+
+- **Most In-Demand Skills**:  
+  - **Spark, Power BI, Tableau, Excel, SQL, Python** dominate job postings.  
+  - These reflect the *core toolkit* employers expect from analysts.  
+
+- **Mismatch**:  
+  - High-paying skills (e.g., PySpark, Databricks) are not the most in-demand.  
+  - In-demand skills (Excel, SQL, Power BI) don’t always translate to higher salaries.  
+
+</details>
+
+---
+
+<details>
+<summary>📌 Deeper Insights</summary>
+
+- **Market maturity**: Employers pay more for **engineering-adjacent skills** (PySpark, Databricks, Scala) because they blur into data engineering.  
+- **Breadth vs. depth**: Analysts with **breadth (Excel, Power BI, SQL)** are widely employable, but those with **depth in niche tools** can negotiate higher pay.  
+- **Compliance premium**: Skills like **GDPR** appear in the high-salary list, showing that regulatory expertise adds value in global-facing roles.  
+- **Open-source databases** (PostgreSQL, MongoDB, Neo4j) also feature in the high-salary list, reflecting demand for flexibility beyond traditional SQL.  
+
+</details>
+
+---
+
+<details>
+<summary>🚀 Strategic Takeaways</summary>
+
+- **For learners**:  
+  - Build a **core stack** first: SQL + Python + Excel + Power BI/Tableau.  
+  - Then layer on **niche, high-paying skills** (PySpark, Databricks, Linux) to stand out.  
+
+- **For career pivots**:  
+  - If you’re already strong in SQL/Python, adding **big data + compliance skills** can unlock higher salary bands.  
+
+- **For employers**:  
+  - The gap between demand and pay suggests a need to **rethink compensation** — common skills are undervalued, while niche skills are overvalued due to scarcity.  
+
+</details>
+
+---
+
+<details>
+<summary>✨ Personal Relevance </summary>
+
+For my own journey, this chart validates my focus on **SQL + Python + Power BI** as the in-demand foundation for my analytics dashboard.  
+But it also signals a future opportunity: adding **PySpark/Databricks** could position me closer to the **high-paying engineering–analytics overlap**.
 
 </details>
