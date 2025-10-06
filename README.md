@@ -171,3 +171,88 @@ For my own journey, this validates my current focus on **SQL + Python** for anal
 As I expand into engineering and data science, **Spark, cloud, and advanced modeling** will become the next milestones.  
 
 </details>
+
+
+## 2.How are in-demand skills trending for Data Analysts?
+
+To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
+
+### Visualize Data
+
+```python
+
+from matplotlib.ticker import PercentFormatter
+
+df_plot = df_DA_I_percent.iloc[:, :5]
+sns.lineplot(data=df_plot, dashes=False, legend='full', palette='tab10')
+
+plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+
+```
+
+### Results
+
+![Trending Top Skills for Data Analysts in India](3_Project\Images\skill_trends.png)  
+*Line Graph visualizing the trending top skills for data analysts in India in 2023.*
+
+
+This visualization tracks the **percentage of job postings requiring specific skills** for Data Analyst roles in India across 2023.  
+Skills analyzed: **SQL, Python, Excel, Tableau, Power BI**.
+
+---
+
+<details>
+<summary>🔑 Key Observations</summary>
+
+- **SQL dominates** throughout the year, peaking in May (~70%), confirming its role as the backbone skill.  
+- **Python demand is steady** (30–45%), with a mid-year peak in June, reflecting its growing importance for automation and scripting.  
+- **Excel shows volatility**, with a major spike in June (~60%), proving it remains indispensable for business-facing analysis.  
+- **Tableau demand rises mid-year**, peaking in July (~45%), showing visualization tools gain traction seasonally.  
+- **Power BI consistently trails** (20–30%), suggesting it’s valued but less frequently required compared to Tableau.  
+
+</details>
+
+---
+
+<details>
+<summary>📌 Deeper Insights</summary>
+
+- **SQL as a constant**: Employers consistently prioritize SQL, making it the safest foundational skill.  
+- **Python’s upward momentum**: Its mid-year peak signals a shift toward analysts who can handle larger datasets and automation.  
+- **Excel’s resilience**: Despite newer tools, Excel’s June surge shows it’s still central to many workflows.  
+- **Visualization split**: Tableau outpaces Power BI in demand, but both remain secondary to SQL/Python.  
+- **Seasonal hiring patterns**: Peaks in SQL, Excel, and Tableau around mid-year may align with hiring cycles or project launches.  
+
+</details>
+
+---
+
+<details>
+<summary>🚀 Strategic Takeaways</summary>
+
+- **For learners**:  
+  - Start with **SQL + Excel** for quick entry.  
+  - Add **Python** to future-proof your profile.  
+  - Layer on **Tableau/Power BI** for visualization credibility.  
+
+- **For career pivots**:  
+  - Analysts aiming for advanced roles should strengthen **Python + visualization**.  
+  - Those targeting engineering/data science should expand into **cloud + big data tools**.  
+
+- **For employers**:  
+  - The steady rise in postings highlights a competitive market.  
+  - Clearer job descriptions can help attract candidates with the right skill mix.  
+
+</details>
+
+---
+
+<details>
+<summary>✨ Personal Relevance (Optional)</summary>
+
+For my own journey, this trend validates my focus on **SQL + Python** as the backbone of my analytics dashboard project.  
+It also highlights why I’m adding **Power BI/Tableau** for visualization — even if demand is lower, it differentiates my profile.   
+
+</details>
