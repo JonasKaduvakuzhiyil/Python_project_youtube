@@ -440,7 +440,7 @@ But it also signals a future opportunity: adding **PySpark/Databricks** could po
 
 To identify the most optimal skills to learn ( the ones that are the highest paid and highest in demand) I calculated the percent of skill demand and the median salary of these skills. To easily identify which are the most optimal skills to learn. 
 
-View my notebook with detailed steps here: [5_Optimal_Skills](3_Project\5_optimal_skills.ipynb).
+View my notebook with detailed steps here: [5_Optimal_Skills]([3_Project\5_optimal_skills.ipynb](https://github.com/JonasKaduvakuzhiyil/Python_project_youtube/blob/main/3_Project/5_optimal_skills.ipynb)).
 
 #### Visualize Data
 
