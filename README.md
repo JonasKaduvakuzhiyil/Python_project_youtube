@@ -84,7 +84,7 @@ plt.show()
 
 # Results
 
-![Visualization of Top Skills For Job Roles in India]()
+![Visualization of Top Skills For Job Roles in India](images/skill_demand.png)
 
 
 # Insights 
@@ -455,7 +455,7 @@ plt.show()
 
 #### Results
 
-![Most Optimal Skills for Data Analysts in the India](images/skill_demand.png)    
+![Most Optimal Skills for Data Analysts in the India]()    
 *A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in India.*
 
 #### Insights:
