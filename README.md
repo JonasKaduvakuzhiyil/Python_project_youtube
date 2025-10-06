@@ -434,3 +434,95 @@ For my own journey, this chart validates my focus on **SQL + Python + Power BI**
 But it also signals a future opportunity: adding **PySpark/Databricks** could position me closer to the **high-paying engineering–analytics overlap**.
 
 </details>
+
+## 4. What are the most optimal skills to learn for Data Analysts?
+
+To identify the most optimal skills to learn ( the ones that are the highest paid and highest in demand) I calculated the percent of skill demand and the median salary of these skills. To easily identify which are the most optimal skills to learn. 
+
+View my notebook with detailed steps here: [5_Optimal_Skills](3_Project\5_optimal_skills.ipynb).
+
+#### Visualize Data
+
+```python
+from adjustText import adjust_text
+import matplotlib.pyplot as plt
+
+plt.scatter(df_DA_skills_high_demand['skill_percent'], df_DA_skills_high_demand['median_salary'])
+plt.show()
+
+```
+
+#### Results
+
+![Most Optimal Skills for Data Analysts in the India](3_Project\Images\Scatter_plot.png)    
+*A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in India.*
+
+#### Insights:
+
+
+This scatter plot compares **skill demand (% of job postings)** with **median yearly salary (USD)**.  
+It helps identify which skills are both **widely requested** and **well-compensated**, versus those that are niche but lucrative.
+
+---
+
+<details>
+<summary>🔑 Key Observations</summary>
+
+- **High demand + solid pay**:  
+  - **SQL and Excel** sit in the sweet spot — widely requested and offering competitive salaries.  
+  - **Python** also balances strong demand with good compensation.  
+
+- **High pay, low demand**:  
+  - **Looker, PowerPoint, Spark** show the highest salaries but appear in fewer postings.  
+  - These are niche skills that command a premium due to scarcity.  
+
+- **Visualization tools**:  
+  - **Tableau and Power BI** are moderately in demand but don’t push salaries as high as core programming/database skills.  
+
+- **Cloud skills (AWS, Azure)**:  
+  - Present but less dominant for analysts, suggesting they’re more critical in engineering roles.  
+
+</details>
+
+---
+
+<details>
+<summary>📌 Deeper Insights</summary>
+
+- **SQL + Excel resilience**: Despite being “old school,” they remain the most *practical* skills for analysts in India.  
+- **Python’s versatility**: Its balance of demand and salary shows it’s becoming a baseline expectation, not just a bonus.  
+- **Niche premium**: Tools like **Looker** or **Spark** may not appear often, but when they do, they’re tied to specialized, higher-paying roles.  
+- **Category split**:  
+  - *Programming (SQL, Python)* → high demand, strong pay.  
+  - *Analyst tools (Excel, Tableau, Power BI)* → high demand, moderate pay.  
+  - *Cloud & libraries (AWS, Spark)* → lower demand, higher pay.  
+
+</details>
+
+---
+
+<details>
+<summary>🚀 Strategic Takeaways</summary>
+
+- **For learners**:  
+  - Build a **core trio**: SQL + Python + Excel.  
+  - Add **Tableau/Power BI** for visualization credibility.  
+  - Layer on **niche skills (Spark, Looker, cloud)** later to unlock higher salary bands.  
+
+- **For career pivots**:  
+  - If you already have the basics, targeting **one niche premium skill** (e.g., Spark or Databricks) can differentiate you.  
+
+- **For employers**:  
+  - The mismatch between demand and pay suggests a need to **balance hiring strategies** — don’t undervalue common skills that drive most analyst workflows.  
+
+</details>
+
+---
+
+<details>
+<summary>✨ Personal Relevance </summary>
+
+For my own journey, this chart validates my focus on **SQL + Python + Excel** as the backbone of my analytics dashboard.  
+But it also highlights a future opportunity: adding **Spark or cloud tools** could position me closer to the **high-paying analyst–engineer overlap**, which aligns with scaling Trado Ventures’ export insights platform.  
+
+</details>
