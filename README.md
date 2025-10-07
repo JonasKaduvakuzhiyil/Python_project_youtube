@@ -279,7 +279,7 @@ plt.show()
 
 #### Results
 
-![Salary Distributions of Data Jobs in India](3_Project\Images\salary_analysis.png)  
+![Salary Distributions of Data Jobs in India](images/salary_analysis.png)  
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
 
 ### Insights
