@@ -264,7 +264,7 @@ It also highlights why I’m adding **Power BI/Tableau** for visualization — e
 
 To identify the highest-paying roles and skills, I only got jobs in the United States and looked at their median salary. But first I looked at the salary distributions of common data jobs like Data Scientist, Data Engineer, and Data Analyst, to get an idea of which jobs are paid the most. 
 
-View my notebook with detailed steps here: [4_Salary_Analysis](3_Project\4_salary_analysis.ipynb).
+View my notebook with detailed steps here: [4_Salary_Analysis](3_Project/4_salary_analysis.ipynb).
 
 #### Visualize Data 
 
@@ -279,7 +279,7 @@ plt.show()
 
 #### Results
 
-![Salary Distributions of Data Jobs in the US](3_Project\Images\salary_analysis.png)  
+![Salary Distributions of Data Jobs in India](3_Project\Images\salary_analysis.png)  
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
 
 ### Insights
