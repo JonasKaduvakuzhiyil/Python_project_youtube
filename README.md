@@ -194,7 +194,7 @@ plt.show()
 
 ### Results
 
-![Trending Top Skills for Data Analysts in India](<img width="629" height="461" alt="image" src="https://github.com/user-attachments/assets/cefbb1ac-562e-4e02-b455-6ce67b35b1a1" />
+![Trending Top Skills for Data Analysts in India](images/skill_trends.png
 )  
 *Line Graph visualizing the trending top skills for data analysts in India in 2023.*
 
